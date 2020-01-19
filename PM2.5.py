@@ -5,14 +5,14 @@ def sendmail(message):
     from email.mime.text import MIMEText
 
     # 寄件者，收件者
-    from_addr = '810252@stu.nknush.kh.edu.tw'
+    from_addr = 'mailtest1458@gmail.com'
     to_addr = '810252@stu.nknush.kh.edu.tw'
 
 
     smtpssl=smtplib.SMTP_SSL("smtp.gmail.com", 465)
-    smtpssl.login(from_addr, "E126163418")
+    smtpssl.login(from_addr, "xxxxxxxxx")
 
-    msg = 'test mail 中文內容測試'+ message
+    msg = '復興站'+ message
     mime=MIMEText(msg, "plain", "utf-8")
     mime["Subject"]="Python中文信件!!!(MIME)"
     # 顯示的名稱
@@ -37,3 +37,4 @@ while True:
             sendmail(site['PM25'])
             break
     time.sleep(3600)
+   
